@@ -8,6 +8,7 @@ Basic premise of this project for me is to improve css and learn to work with ap
 Here:
 Every time getJoke is invoked, the class fade from present item get removed and url is fetched from api and class fade is added
 to it, hence it gets displayed.
+
 */
 
 
