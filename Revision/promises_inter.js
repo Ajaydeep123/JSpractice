@@ -71,3 +71,36 @@ promise.then(script => alert('Another handler...'));
 // function cb(data) {
 //   console.log(data + "");
 // }
+
+
+// let promise = new Promise(function(resolve, reject) {
+//   resolve(1);
+
+//   setTimeout(() => resolve(2), 1000);
+// });
+
+// promise.then(alert);
+
+// The output is: 1.
+
+// The second call to resolve is ignored, because only the first call of reject/resolve is taken into account. Further calls are ignored.
+
+
+
+//thenable
+class Thenable {
+  constructor(num) {
+    this.num = num;
+  }
+  then(resolve, reject) {
+    alert(resolve); // function() { native code }
+    // resolve with this.num*2 after the 1 second
+    setTimeout(() => resolve(this.num * 2), 1000); // (**)
+  }
+}
+
+new Promise(resolve => resolve(1))
+  .then(result => {
+    return new Thenable(result); // (*)
+  })
+  .then(alert); // shows 2 after 1000ms
