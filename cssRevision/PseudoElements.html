@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+    /* In CSS, ::after creates a pseudo-element that is the last child of the selected element.
+     It is often used to add cosmetic content to an element with the content property.
+      It is inline by default. */
+a::after {
+    content: ' (' attr(href) ')';
+}
+
+.dead-link {
+    text-decoration: line-through;
+}
+
+.dead-link::after {
+    content: url('../../media/warning.svg');
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+}
+video::backdrop {
+  background-color: #448;
+}
+
+
+</style>
+</head>
+<body>
+    <p>The sailfish is named for its sail-like dorsal fin and is widely considered the fastest fish in the ocean.
+         <a href="https://en.wikipedia.org/wiki/Sailfish">You can read more about it here</a>.
+    </p>
+
+    <p>The red lionfish is a predatory scorpionfish that lives on coral reefs of the Indo-Pacific Ocean and more recently in the western Atlantic. <a href="" class="dead-link">
+        You can read more about it here</a>.
+    </p>
+
+    <video controls
+  src="https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4"
+  poster="https://peach.blender.org/wp-content/uploads/title_anouncement.jpg?x11217"
+  width="620">
+Sorry, your browser doesn't support embedded videos.  Time to upgrade!
+</video>
+
+    
+
+</body>
+</html>
