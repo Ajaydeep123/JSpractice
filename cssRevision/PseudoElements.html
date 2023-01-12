@@ -22,6 +22,17 @@ a::after {
 video::backdrop {
   background-color: #448;
 }
+input {
+    margin-top: 1rem;
+}
+
+input::file-selector-button {
+    font-weight: bold;
+    color: dodgerblue;
+    padding: 0.5em;
+    border: thin solid grey;
+    border-radius: 3px;
+}
 
 
 </style>
@@ -41,6 +52,11 @@ video::backdrop {
   width="620">
 Sorry, your browser doesn't support embedded videos.  Time to upgrade!
 </video>
+<label for="avatar">Choose a profile picture:</label><br>
+
+<input type="file"
+       name="avatar"
+       accept="video/mp4, image/jpeg">
 
     
 
