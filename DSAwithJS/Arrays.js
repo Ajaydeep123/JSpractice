@@ -28,3 +28,15 @@
 //     }
 // }
 // larger(10, 20)
+
+// Write a JavaScript conditional statement to find the sign of product of three numbers. Display an alert box with the specified sign.
+let x = parseInt(prompt('enter 1st number')),
+y = parseInt(prompt('enter the 2nd number')),
+z = parseInt(prompt('enter the third number'));
+const result = x*y*z;
+if (result>0) {
+alert('it is +ve');
+}
+else if (result ==0) { alert ('it is zero ')}
+
+else { alert ('the value is -ve')}
