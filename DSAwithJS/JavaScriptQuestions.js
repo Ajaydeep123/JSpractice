@@ -134,11 +134,16 @@ function nextInLine(arr, item) {
   checkAge({ age: 18 }); //Hmm.. You don't have an age I guess */
 
 
+
+
 /*   function getAge(...args) {
     console.log(typeof args);
   }
   
   getAge(21);  *///object -> The rest parameter (...args) lets us "collect" all remaining arguments into an array. An array is an object, so typeof args returns "object"
+
+
+
 
 /*   function getAge() {
     'use strict';
@@ -150,3 +155,8 @@ function nextInLine(arr, item) {
   We never declared the variable age, and since we use "use strict", it will throw a reference error. 
   If we didn't use "use strict", it would have worked, since the property age would have gotten added to the global object. */
 
+
+
+
+//   const sum = eval('10*10+5');
+//105 -> eval evaluates codes that's passed as a string. If it's an expression, like in this case, it evaluates the expression. The expression is 10 * 10 + 5. This returns the number 105.
