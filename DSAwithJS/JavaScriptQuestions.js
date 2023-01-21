@@ -121,7 +121,7 @@ function nextInLine(arr, item) {
  */
 
 
-  function checkAge(data) {
+/*   function checkAge(data) {
     if (data === { age: 18 }) {
       console.log('You are an adult!');
     } else if (data == { age: 18 }) {
@@ -131,4 +131,12 @@ function nextInLine(arr, item) {
     }
   }
   
-  checkAge({ age: 18 }); //Hmm.. You don't have an age I guess
+  checkAge({ age: 18 }); //Hmm.. You don't have an age I guess */
+
+
+  function getAge(...args) {
+    console.log(typeof args);
+  }
+  
+  getAge(21); //object -> The rest parameter (...args) lets us "collect" all remaining arguments into an array. An array is an object, so typeof args returns "object"
+
