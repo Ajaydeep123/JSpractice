@@ -160,3 +160,17 @@ function nextInLine(arr, item) {
 
 //   const sum = eval('10*10+5');
 //105 -> eval evaluates codes that's passed as a string. If it's an expression, like in this case, it evaluates the expression. The expression is 10 * 10 + 5. This returns the number 105.
+/* 
+Check For The Presence of an Element With indexOf()
+
+function quickCheck(arr, elem) {
+  // Only change code below this line
+if(arr.indexOf(elem)>=0){
+  return true;
+}else{
+  return false
+}
+  // Only change code above this line
+}
+
+console.log(quickCheck(['squash', 'onions', 'shallots'], 'mushrooms')); */
