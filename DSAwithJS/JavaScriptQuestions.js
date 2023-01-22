@@ -174,6 +174,10 @@ if(arr.indexOf(elem)>=0){
 }
 
 console.log(quickCheck(['squash', 'onions', 'shallots'], 'mushrooms')); */ 
+
+
+
+
 /* 
 celsius to fahrenheit
 
@@ -184,3 +188,13 @@ function convertCtoF(celsius) {
 
 // Change the inputs below to test your code
 convertCtoF(30); */
+
+/* 
+reverse a String
+
+function reverseString(str) {
+  return str
+    .split("")
+    .reverse()
+    .join("");
+} */
