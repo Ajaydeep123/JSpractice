@@ -26,25 +26,42 @@
 const fetchNames = async () => {
     try {
       const res = await Promise.all([
-        fetch("https://api.sampleapis.com/coffee/hot"),
-        fetch("https://api.sampleapis.com/coffee/iced")
+        fetch('https://api.sampleapis.com/coffee/hot'),
+        fetch('https://api.sampleapis.com/coffee/iced'),
       ]);
-      const data = await Promise.all(res.map(r => r.json()))
+      const data = await Promise.all(res.map(r => r.json()));
       // console.log(data[0].title)
-  
-      const hot= data[0];
+      //  try {
+      //     const response = await fetch('https://react-req-93ea7-default-rtdb.firebaseio.com/movies.json');
+      //     if (!response.ok) {
+      //       throw new Error('Something went wrong!');
+      //     }
+
+      //     const data = await response.json();
+
+      //     const loadedMovies = [];
+
+      //     for (const key in data) {
+      //       loadedMovies.push({
+      //         id: key,
+      //         title: data[key].title,
+      //         openingText: data[key].openingText,
+      //         releaseDate: data[key].releaseDate,
+      //       });
+      //     }
+      const hot = data[0];
       const iced = data[1];
-  
-      const hotTitle=[];
-      const icedTitle=[];
-  
-      for(const key in hot){
+
+      const hotTitle = [];
+      const icedTitle = [];
+
+      for (const key in hot) {
         hotTitle.push({
           title: hot[key].title,
           description: hot[key].description,
         });
       }
-      for(const key in iced){
+      for (const key in iced) {
         icedTitle.push({
           title: iced[key].title,
           description: iced[key].description,
@@ -52,12 +69,11 @@ const fetchNames = async () => {
       }
       console.log(hotTitle);
       console.log(icedTitle);
-  
+
       // console.log(data[0].map(o=>o.title));
       // console.log(data[1].map(o=>o.title));
-  
-    } catch {
-      throw Error("Promise failed");
+    } catch (error) {
+      setError(error.message);
     }
   };
   fetchNames();
