@@ -18,8 +18,10 @@ for (let key in navbar) {
 
 console.log(somearr);
  */
-// Question2
 
+
+// Question2
+/* 
 import './styles.css';
 import { useState } from 'react';
 export default function App() {
@@ -35,7 +37,9 @@ export default function App() {
   };
   const handleEnter = e => {
     e.preventDefault();
-    setCount(parseInt(e.target.value, 10));
+    var value1 = parseInt(e.target.value, 10);
+    var inputCase =isNaN(value1)?0:value1;  //this is important, if we don't do this then value will be equal to Nan in situation when the input field is empty.
+    setCount(inputCase);
   };
   const onReset = () => {
     setCount(0);
@@ -50,3 +54,4 @@ export default function App() {
     </div>
   );
 }
+ */
