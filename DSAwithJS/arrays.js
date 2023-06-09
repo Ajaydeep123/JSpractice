@@ -21,3 +21,29 @@ console.log(x);
 let z=20, y=30;
 [x,y]=[y,x];
 console.log(x,y);
+
+
+//Number of arrays inside an array
+
+function countArray(arr){
+    let arrayCount =0;
+    arr.forEach(element =>{
+        if(Array.isArray(element)){
+            arrayCount++;
+        }
+    })
+
+    return arrayCount;
+}
+
+const nestedArray = [1, [2, 3], [4, 5, 6], 7, [8, [9, 10]]];
+const numberOfArrays = countArray(nestedArray);
+console.log(numberOfArrays); // Output: 3
+
+
+function arrayCount(arr){
+    return arr.filter(n=>Array.isArray(n)).length;
+}
+
+arr_nums = [2, 8, [6], 3, 3, 5, 3, 4, [5, 4]];
+console.log('Number of arrays inside the said array: ' + arrayCount(arr_nums));
